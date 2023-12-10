@@ -26,16 +26,16 @@ class Library {
     public static void addBook(String title, String author) {
         if (bookCount < MAX_BOOKS) {
             books[bookCount++] = new Book(title, author);
-            System.out.println("Book added successfully!");
+            System.out.println("Book added successfully!\n");
         } else {
             System.out.println("Library is full. Cannot add more books.");
         }
     }
 
     public static void displayBooks() {
-        System.out.println("Books in the library:");
+        System.out.println("\nBooks in the library:");
         for (int i = 0; i < bookCount; i++) {
-            System.out.println("Title: " + books[i].getTitle() + ", Author: " + books[i].getAuthor());
+            System.out.println("\nTitle: " + books[i].getTitle() + "\nAuthor: " + books[i].getAuthor());
         }
     }
 }
@@ -49,8 +49,9 @@ public class LibraryManagementSystem {
             System.out.println("2. Display books");
             System.out.println("3. Exit");
 
-            System.out.print("Enter your choice: ");
+            System.out.print("Enter 1, 2, or 3: ");
             int choice = scanner.nextInt();
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
