@@ -1,23 +1,5 @@
 import java.util.Scanner;
 
-class Book {
-    private String title;
-    private String author;
-
-    public Book(String title, String author) {
-        this.title = title;
-        this.author = author;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-}
-
 class Library {
     private static int bookCount = 0;
     private static final int MAX_BOOKS = 100;
