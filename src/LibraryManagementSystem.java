@@ -55,9 +55,9 @@ public class LibraryManagementSystem {
             switch (choice) {
                 case 1:
                     System.out.print("Enter book title: ");
-                    String title = scanner.next();
+                    String title = scanner.nextLine();
                     System.out.print("Enter author name: ");
-                    String author = scanner.next();
+                    String author = scanner.nextLine();
                     Library.addBook(title, author);
                     break;
                 case 2:
