@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class Library {
     private static int bookCount = 0;
-    private static final int MAX_BOOKS = 100;
+    private static final int MAX_BOOKS = 100000;
     private static Book[] books = new Book[MAX_BOOKS];
 
     public static void addBook(String title, String author, int copies) {
