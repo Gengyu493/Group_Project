@@ -5,9 +5,9 @@ class Library {
     private static final int MAX_BOOKS = 100;
     private static Book[] books = new Book[MAX_BOOKS];
 
-    public static void addBook(String title, String author) {
+    public static void addBook(String title, String author, int copies) {
         if (bookCount < MAX_BOOKS) {
-            books[bookCount++] = new Book(title, author);
+            books[bookCount++] = new Book(title, author, copies);
             System.out.println("Book added successfully!\n");
         } else {
             System.out.println("Library is full. Cannot add more books.");
@@ -17,7 +17,7 @@ class Library {
     public static void displayBooks() {
         System.out.println("\nBooks in the library:");
         for (int i = 0; i < bookCount; i++) {
-            System.out.println("\nTitle: " + books[i].getTitle() + "\nAuthor: " + books[i].getAuthor());
+            System.out.println("\nTitle: " + books[i].getTitle() + "\nAuthor: " + books[i].getAuthor() + "\nCopies: " + books[i].getCopies());
         }
     }
 }
@@ -41,7 +41,9 @@ public class LibraryManagementSystem {
                     String title = scanner.nextLine();
                     System.out.print("Enter author name: ");
                     String author = scanner.nextLine();
-                    Library.addBook(title, author);
+                    System.out.print("Enter the amount of copies: ");
+                    int copies = scanner.nextInt();
+                    Library.addBook(title, author, copies);
                     break;
                 case 2:
                     Library.displayBooks();
