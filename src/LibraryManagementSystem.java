@@ -6,7 +6,7 @@ class Library {
     private static Book[] books = new Book[MAX_BOOKS];
 
     public static void addBook(String title, String author, int copies) {
-        if (bookCount > MAX_BOOKS) {
+        if (bookCount < MAX_BOOKS) {
             books[bookCount++] = new Book(title, author, copies);
             System.out.println("Book added successfully!\n");
         } else {
